@@ -1,0 +1,34 @@
+:root{
+  --body-bg:#140A25;
+  /* --body-bg:linear-gradient(#140A25,#400D2A); */
+  --menu-item:#DB2B30;
+}
+* {
+  user-select: none;
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+}
+html,body{
+  background:var(--body-bg);
+  height: 100%;
+  width: 100%;
+}
+main{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page{
+  transition: .5s all ;
+  height: 100%;
+  width: 100%;
+}
+.page.deactive{
+  right: 100%;
+}
+.page.active{
+  right: 0;
+}
