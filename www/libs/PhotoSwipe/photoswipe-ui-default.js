@@ -839,9 +839,7 @@ var PhotoSwipeUI_Default =
 	        });
 	      }
 	      else if (a == "on") {//NORMAL OLCAK
-	        AndroidFullScreen.showSystemUI(function(){
-	          document.querySelector(".fullscreen-button").setAttribute("data","off");
-	        });
+	        Resizer();
 	      }
 
 				// disable close-on-scroll in fullscreen
@@ -856,9 +854,7 @@ var PhotoSwipeUI_Default =
 			};
 			api.exit = function() {
 				console.log("tam ekrandan çık");
-				AndroidFullScreen.showSystemUI(function(){
-          document.querySelector(".fullscreen-button").setAttribute("data","off");
-        });
+				Resizer();
 				_options.closeOnScroll = _initalCloseOnScrollValue;
 
 				return document[this.exitK]();

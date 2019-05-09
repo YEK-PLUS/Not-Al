@@ -31,3 +31,9 @@ function createListElement(data){
 
   return a;
 }
+
+function Resizer(){
+  AndroidFullScreen.immersiveMode();
+  AndroidFullScreen.setSystemUiVisibility();
+  AndroidFullScreen.showUnderSystemUI();
+}

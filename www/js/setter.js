@@ -1,8 +1,8 @@
 app.setter = {};
 
-app.setter.data = JSON.parse(getFile('http://dark-software.tk/getjson/class',"CLASS"));
-app.setter.Rdata = JSON.parse(getFile('http://dark-software.tk/getjson/reversedClass',"RDATA"));
-app.setter.adsData = JSON.parse(getFile('http://dark-software.tk/getjson/ads',"ADS"));
+app.setter.data = JSON.parse(getFile('http://94.199.200.240/~darksoftware/getjson/class',"CLASS"));
+app.setter.Rdata = JSON.parse(getFile('http://94.199.200.240/~darksoftware/getjson/reversedClass',"RDATA"));
+app.setter.adsData = JSON.parse(getFile('http://94.199.200.240/~darksoftware/getjson/ads',"ADS"));
 
 app.setter.class = function(){
   app.setter.remove();
@@ -100,12 +100,12 @@ app.setter.note = function(class_,lesson,topic){
   for (var i = 0; i < app.setter.data[class_][lesson][topic].length; i++) {
     items.push(
       {
-        src: 'http://dark-software.tk/getimage'+finalize+app.setter.data[class_][lesson][topic][i],
+        src: 'http://94.199.200.240/~darksoftware/getimage'+finalize+app.setter.data[class_][lesson][topic][i],
         w: 1200,
         h: 900
       }
     );
-    console.log('http://dark-software.tk/getimage'+finalize+app.setter.data[class_][lesson][topic][i]);
+    console.log('http://94.199.200.240/~darksoftware/getimage'+finalize+app.setter.data[class_][lesson][topic][i]);
   }
   // define options (if needed)
   var options = {
