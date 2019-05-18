@@ -1,8 +1,8 @@
 app.setter = {};
 
-app.setter.data = JSON.parse(getFile('http://94.199.200.240/~darksoftware/getjson/class',"CLASS"));
-app.setter.Rdata = JSON.parse(getFile('http://94.199.200.240/~darksoftware/getjson/reversedClass',"RDATA"));
-app.setter.adsData = JSON.parse(getFile('http://94.199.200.240/~darksoftware/getjson/ads',"ADS"));
+app.setter.data = JSON.parse(getFile('http://94.199.200.240/~darksoftware/not-al/getjson/class'));
+app.setter.Rdata = JSON.parse(getFile('http://94.199.200.240/~darksoftware/not-al/getjson/reversedClass'));
+app.setter.adsData = JSON.parse(getFile('http://94.199.200.240/~darksoftware/not-al/getjson/ads'));
 
 app.setter.class = function(){
   app.setter.remove();
@@ -90,7 +90,7 @@ app.setter.note = function(class_,lesson,topic){
   let Rtopic = app.setter.Rdata[class_][lesson][topic].number;
   let Rlesson = app.setter.Rdata[class_][lesson].number;
   let Rclass_ = app.setter.Rdata[class_].number;
-  let adsid = app.setter.adsData[class_][lesson][topic];
+  let adsid = app.setter.adsData.Main.Default.ADS;
   console.log("REKLAM ID:",adsid);
   app.setter.ads.gecis(adsid);
   let finalize = '/' + Rclass_ + '/' + Rlesson + '/' + Rtopic + '/';
@@ -100,12 +100,12 @@ app.setter.note = function(class_,lesson,topic){
   for (var i = 0; i < app.setter.data[class_][lesson][topic].length; i++) {
     items.push(
       {
-        src: 'http://94.199.200.240/~darksoftware/getimage'+finalize+app.setter.data[class_][lesson][topic][i],
-        w: 1200,
-        h: 900
+        src: 'http://94.199.200.240/~darksoftware/not-al/getimage'+finalize+app.setter.data[class_][lesson][topic][i],
+        w: 3120,
+        h: 4160
       }
     );
-    console.log('http://94.199.200.240/~darksoftware/getimage'+finalize+app.setter.data[class_][lesson][topic][i]);
+    console.log('http://94.199.200.240/~darksoftware/not-al/getimage'+finalize+app.setter.data[class_][lesson][topic][i]);
   }
   // define options (if needed)
   var options = {
